@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crunchyroll Speed Controller</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <h1>Crunchyroll Speed Controller</h1>
+
+      <p class="current">Current speed: <strong id="currentSpeed">1x</strong></p>
+
+      <div class="speed-grid" id="speedButtons">
+        <button data-speed="0.5">0.5x</button>
+        <button data-speed="1">1x</button>
+        <button data-speed="1.25">1.25x</button>
+        <button data-speed="1.5">1.5x</button>
+        <button data-speed="1.75">1.75x</button>
+        <button data-speed="2">2x</button>
+        <button data-speed="2.5">2.5x</button>
+        <button data-speed="3">3x</button>
+      </div>
+
+      <form id="customSpeedForm" class="custom-row">
+        <input id="customSpeed" type="number" min="0.1" max="16" step="0.05" placeholder="Custom speed (0.1 - 16)" />
+        <button type="submit">Apply</button>
+      </form>
+
+      <p id="statusText" class="status">Checking video...</p>
+      <p class="version">Version: <span id="extensionVersion">-</span></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

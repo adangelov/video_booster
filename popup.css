@@ -1,0 +1,86 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #11141a;
+  color: #ecf0f3;
+}
+
+.popup {
+  width: 280px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.current,
+.status,
+.version {
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.speed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+}
+
+button {
+  border: 1px solid #2f3745;
+  background: #1b2130;
+  color: #ecf0f3;
+  border-radius: 6px;
+  padding: 8px 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background: #25304a;
+}
+
+button.active {
+  border-color: #4b87ff;
+  background: #2a3f6f;
+}
+
+.custom-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #2f3745;
+  border-radius: 6px;
+  background: #0f131c;
+  color: #ecf0f3;
+  padding: 7px;
+  font-size: 12px;
+}
+
+.status.ok {
+  color: #81e08a;
+}
+
+.status.warn {
+  color: #f5c86f;
+}
+
+.version {
+  margin-top: 10px;
+  opacity: 0.7;
+  text-align: right;
+}

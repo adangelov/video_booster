@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Crunchyroll Speed Controller",
+  "description": "Control Crunchyroll video playback speed with presets and custom values.",
+  "version": "1.0.2",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.crunchyroll.com/*",
+    "https://crunchyroll.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.crunchyroll.com/*",
+        "https://crunchyroll.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
